@@ -5,8 +5,8 @@ package org.ganger.microkata
  */
 object MicroKata {
   case class Person(name: String, age: Int)
-  def toUpper(input: Seq[String]): Seq[String] = ???
-  def lessThan(input: Seq[String], i: Int): Seq[String] = ???
+  def toUpper(input: Seq[String]): Seq[String] = input.map(_.toUpperCase())
+  def lessThan(input: Seq[String], i: Int): Seq[String] = input.filter(_.length<i)
   def flat(input: Seq[Seq[Int]]): Any = ???
   def max(people: Seq[Person]): Person = ???
   def sum1(input: Seq[Int]) = ???
